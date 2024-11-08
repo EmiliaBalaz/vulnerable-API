@@ -1,0 +1,29 @@
+USE [BookStore]
+GO
+
+CREATE TABLE [dbo].[Books](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NULL,
+	[Author] [nvarchar](max) NULL,
+ CONSTRAINT [PK_Books] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[RegisterUsers](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [nvarchar](max) NOT NULL,
+	[LastName] [nvarchar](max) NOT NULL,
+	[Email] [nvarchar](max) NOT NULL,
+	[UserName] [nvarchar](max) NOT NULL,
+	[Password] [nvarchar](max) NOT NULL,
+	[Type] [int] NOT NULL,
+ CONSTRAINT [PK_registerUsers] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
